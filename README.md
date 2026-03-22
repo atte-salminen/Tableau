@@ -3,14 +3,13 @@ Tässä projektissa analysoidaan Traficomin avointa ajoneuvodataa. Painopisteen�
 Dashboardin sisältö
 -  Käyttövoimatrendi: Käyttövoimien markkinaosuuksien muutos aikasarjana.
 -  Päästöanalyysi: Uusien autojen keskimääräisten CO2-päästöjen kehityskaari.
--  Alueellinen tarkastelu: Suosituimpien kuntien rekisteröintimäärät (Treemap-visualisointi).
 -  Interaktiivisuus: Automerkkikohtainen suodatin, joka päivittää kaikki dashboardin näkymät.
 -  Yhteenvetotaulukot: Tarkat lukumäärät ja summatulokset eri kategorioista.
 
 Datan esikäsittely (Python & Pandas)
 Ennen visualisointia raakadata siivottiin ja muokattiin Pythonilla. Esikäsittelyssä tehtiin seuraavat vaiheet:
--  Datan koon optimointi: Poistettiin analyysin kannalta tarpeettomat sarakkeet ja rajattiin aikajakso vuosiin 2020–2025.
--  Puuttuvien arvojen käsittely: Siivottiin havainnot, joista puuttui kriittistä tietoa (kuten päästöt tai kunta).
+-  Datan koon optimointi: Poistettiin analyysin kannalta tarpeettomat sarakkeet
+-  Puuttuvien arvojen käsittely: Siivottiin ja yhtenäistettiin havainnot, joista puuttui kriittistä tietoa (kuten päästöt tai kunta).
 -  Kategorioiden ryhmittely: Useat kymmenet polttoaineluokat tiivistettiin neljään pääryhmään (Bensiini, Diesel, Sähkö ja Muut/Hybridit).
 -  Tyypinmuunnokset: Päivämäärät ja numeeriset arvot muunnettiin formaattiin, jota Tableau osaa käsitellä aikasarjoina.
 
