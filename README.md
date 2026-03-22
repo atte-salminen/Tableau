@@ -1,4 +1,4 @@
-Tässä projektissa analysoidaan Traficomin avointa ajoneuvodataa. Painopisteenä on seurata autokannan sähköistymistä, CO2-päästöjen kehitystä ja rekisteröintien jakautumista kunnittain.
+Tässä projektissa analysoidaan Traficomin avointa ajoneuvodataa. Painopisteenä on seurata autokannan sähköistymistä ja CO2-päästöjen kehitystä.
 
 Dashboardin sisältö
 -  Käyttövoimatrendi: Käyttövoimien markkinaosuuksien muutos aikasarjana.
