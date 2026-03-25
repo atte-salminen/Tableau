@@ -12,8 +12,6 @@ def prosessoi_ajoneuvodata():
     filename = "TieliikenneAvoinData_31_12_2025.csv"
     df = pd.read_csv(filename, sep=';', encoding='latin-1', low_memory=False)
 
-    print(df.head(25).to_markdown())
-
 
     # 2. Perussuodatukset
     # Jätetään M1 ja M1G, yksityiskäyttö (1.0), tietyt korityypit ja ne joilla on käyttövoima
@@ -166,9 +164,10 @@ def prosessoi_ajoneuvodata():
 
     df = df[valitut_sarakkeet]
 
-    print(df.head(25).to_markdown())
 
-    df.to_csv('autot.csv', index=False, encoding='utf-8')
+    conn = sqlite3.connect('autodata.db')
+    df.to_sql('rekisteroinnit', conn, if_exists='replace', index=False)
+    conn.close()
 
 
 if __name__ == "__main__":
